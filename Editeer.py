@@ -26,7 +26,7 @@ class OpenEdit:
 
 
   #Edit menu including Cut, Copy and Paste 
-  editmenu = Menu(menubar, tearoff=0)
+	editmenu = Menu(menubar, tearoff=0)
 	editmenu.add_command(label="Cut", command=self.cut)
 	editmenu.add_command(label="copy", command=self.copy)
 	editmenu.add_command(label="Paste", command=self.paste)
@@ -47,7 +47,7 @@ class OpenEdit:
   
 
         #Setting up the title of the widget
-        self.root.title("Untitled - OpenEdit")
+        self.root.title("Untitled - Editeer")
         
         # Adding Text Widget in the GUI
         self.text = Text(self.root, bg = "white")
@@ -61,7 +61,7 @@ class OpenEdit:
 
 	#Defining new method
     def new(self):
-        self.root.title("Untitled - OpenEdit")
+        self.root.title("Untitled - Editeer")
         self.file = None			# Absence of file
         self.text.delete(1.0,END)		# clearing the text widgets contents 
 
@@ -80,7 +80,7 @@ class OpenEdit:
             
             #set the root window title as obtained by 'tkFileDialog.askopenfilename' method.
 
-            self.root.title(os.path.basename(self.file) + " - OpenEdit") # Returning the basename of 'self.file'
+            self.root.title(os.path.basename(self.file) + " - Editeer") # Returning the basename of 'self.file'
 
             self.text.delete(1.0,END)         # Clearing the text widget contents.
 
@@ -115,7 +115,7 @@ class OpenEdit:
 
             file.close()     			  # Closing the file
 
-            self.root.title(os.path.basename(self.file) + " - OpenEdit") # Setting the title of the root widget.
+            self.root.title(os.path.basename(self.file) + " - Editeer") # Setting the title of the root widget.
 
 
 
